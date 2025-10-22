@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="description" content="A minimal blog card design showcasing a beautiful image, title, description, and author. Perfect for displaying blog posts in a clean and elegant manner.">
-    <title>Minimal Blog Card</title>
+    <meta name="description" content="Tarjeta de blog minimalista con un diseño elegante que presenta una imagen, título, descripción y autor. Perfecta para mostrar publicaciones de blog de manera limpia y moderna.">
+    <title>Blog Card Minimalista | Design & Art</title>
 </head>
 <body>
-    <div class="blog-card">
-        <div class="blog-card__image">
-            <img src="Cactus.jpg" alt="Cactus Image">
-        </div>
-        <div>
-            <p class="blog-tag">Design</p>
-        </div>
-        <div class="blog-card__content">
-            <h2 class="blog-card__title">Embracing Minimalism</h2>
-            <p class="blog-card__description">From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty that lies in simplicity.</p>
-            <hr>
-            <p class="blog-card__autor  ">Annie Spratt</p>
-        </div>
-
-    </div>
-    
+    <main class="container">
+        <article class="blog-card">
+            <div class="blog-card__image-wrapper">
+                <img src="Cactus.jpg"
+                     srcset="Cactus.jpg 1x, Cactus@2x.jpg 2x"
+                     alt="Cactus minimalista en el desierto"
+                     class="blog-card__image"
+                     loading="lazy">
+                <div class="blog-card__overlay"></div>
+            </div>
+            <div class="blog-card__content">
+                <span class="blog-tag">
+                    <svg class="blog-tag__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1L7.5 4.5L11 5L8.5 7.5L9 11L6 9L3 11L3.5 7.5L1 5L4.5 4.5L6 1Z" fill="currentColor"/>
+                    </svg>
+                    Design
+                </span>
+                <h2 class="blog-card__title">Embracing Minimalism</h2>
+                <p class="blog-card__description">From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty that lies in simplicity.</p>
+                <div class="blog-card__footer">
+                    <div class="blog-card__author">
+                        <div class="blog-card__author-avatar">AS</div>
+                        <div class="blog-card__author-info">
+                            <p class="blog-card__author-name">Annie Spratt</p>
+                            <p class="blog-card__author-date">3 min read • Oct 22, 2025</p>
+                        </div>
+                    </div>
+                    <button class="blog-card__bookmark" aria-label="Guardar artículo">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 2C4.44772 2 4 2.44772 4 3V18L10 14L16 18V3C16 2.44772 15.5523 2 15 2H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
